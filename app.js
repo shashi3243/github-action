@@ -12,6 +12,12 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/test", (req, res) => {
+  return res.status(200).json({
+    status: true,
+    message: "Hello i am testing api.",
+  });
+});
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
